@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark">
+
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/landing_logo"
+        android:contentDescription="@string/logo_text"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTextFields"
+        style="@style/LoginElementSideMargin"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLogin"
+        android:background="@color/login_tf_group_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LoginFormLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/LoginTextEditImage"
+                android:background="@drawable/username_field_bg"
+                android:contentDescription="@string/image_text"/>
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                style="@style/LoginTextEdit"
+                android:layout_width="match_parent"
+                android:hint="@string/username_placeholder"
+                android:imeActionId="100"
+                android:inputType="textPersonName"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        style="@style/LoginButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/login_button_text"/>
+</RelativeLayout>
